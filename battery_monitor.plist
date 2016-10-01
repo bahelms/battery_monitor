@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>battery_monitor</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/local/bin/python</string>
+      <string>/Users/barretthelms/python/battery_monitor/monitor.py</string>
+    </array>
+    <key>StandardOutPath</key>
+    <string>/Users/barretthelms/python/battery_monitor/log/batt_mon.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/barretthelms/python/battery_monitor/log/batt_mon_error.log</string>
+    <key>RunAtLoad</key>
+    <true />
+  </dict>
+</plist>
