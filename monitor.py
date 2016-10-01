@@ -14,6 +14,6 @@ while True:
     logging.info("Checking battery...")
     results = check_output(["pmset", "-g", "batt"])
     remaining_percent = int(re.search(r"(\d{1,3})%", results).group(1))
-    if remaining_percent > 95 or remaining_percent <= 30:
+    if remaining_percent > 90 or remaining_percent <= 30:
         notify(remaining_percent)
     sleep(10)
