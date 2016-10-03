@@ -9,5 +9,5 @@ Get macOS notifications for when your battery percentage hits certain thresholds
     
 ### To run in background on computer start
 
-    sudo cp battery_monitor.plist /Library/LaunchDaemons/
-    launchctl load battery_monitor.plist
+    sudo cp org.battery_monitor.plist /Library/LaunchDaemons/
+    launchctl load org.battery_monitor.plist

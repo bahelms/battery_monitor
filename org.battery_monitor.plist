@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>battery_monitor</string>
+    <string>org.battery_monitor</string>
     <key>ProgramArguments</key>
     <array>
       <string>/usr/local/bin/python</string>
@@ -12,9 +12,7 @@
     <key>StandardOutPath</key>
     <string>/Users/barretthelms/battery_monitor/log/batt_mon.log</string>
     <key>StandardErrorPath</key>
-    <string>
-      /Users/barretthelms/battery_monitor/log/batt_mon_error.log
-    </string>
+    <string>/Users/barretthelms/battery_monitor/log/batt_mon.log</string>
     <key>RunAtLoad</key>
     <true />
   </dict>
