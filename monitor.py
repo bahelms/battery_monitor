@@ -11,8 +11,7 @@ logging.info("Starting Battery Monitor")
 
 def notify(num):
     osa_script_command = """
-    tell application "System Events" to display notification
-    "Battery Charge at {0}%"
+    tell application "System Events" to display notification "Battery Charge at {0}%"
     """
     call(["osascript", "-e", osa_script_command.format(num)])
 

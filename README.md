@@ -4,10 +4,9 @@ Get macOS notifications for when your battery percentage hits certain thresholds
 ### Setup
 
     git clone git@github.com:bahelms/battery_monitor.git
-    cd battery_monitor && pip install -r requirements.txt
-    python monitor.py
-    
-### To run in background on computer start
+    cd battery_monitor
+    ./install.sh
 
-    sudo cp org.battery_monitor.plist /Library/LaunchDaemons/
-    launchctl load org.battery_monitor.plist
+# TODO
+* Only show lower bound notification if battery is discharging
+* Only show upper bound notification if battery is charging
