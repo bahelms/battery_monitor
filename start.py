@@ -1,6 +1,5 @@
 import logging
 from time import sleep
-from subprocess import check_output
 from monitor import Monitor
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s: %(message)s")
