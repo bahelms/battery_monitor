@@ -1,24 +1,19 @@
-import logging
-import re
-from time import sleep
 from subprocess import check_output, call
+from parser import Parser
 
-upper_bound = 100
-lower_bound = 30
+class Monitor:
+    upper_bound = 100
+    lower_bound = 30
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s: %(message)s")
-logging.info("Starting Battery Monitor")
+    @classmethod
+    def check_battery(cls):
+        result = check_output(["pmset", "-g", "batt"])
+        return Parser(result, cls.upper_bound, cls.lower_bound)
 
-def notify(num):
-    osa_script_command = """
-    tell application "System Events" to display notification "Battery Charge at {0}%"
-    """
-    call(["osascript", "-e", osa_script_command.format(num)])
-
-while True:
-    logging.info("Checking battery...")
-    results = check_output(["pmset", "-g", "batt"])
-    remaining_percent = int(re.search(r"(\d{1,3})%", results).group(1))
-    if remaining_percent == upper_bound or remaining_percent <= lower_bound:
-        notify(remaining_percent)
-    sleep(150)
+    @staticmethod
+    def notify(percent):
+        message = "Battery Charge at {0}%".format(percent)
+        osa_script_command = """
+        tell application "System Events" to display notification "{0}"
+        """
+        call(["osascript", "-e", osa_script_command.format(message)])

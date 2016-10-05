@@ -7,6 +7,7 @@ Get macOS notifications for when your battery percentage hits certain thresholds
     cd battery_monitor
     ./install.sh
 
-# TODO
-* Only show lower bound notification if battery is discharging
-* Only show upper bound notification if battery is charging
+# Tests
+Run full suite with: 
+  
+    python -m unittest discover tests -p ".py"
