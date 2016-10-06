@@ -7,6 +7,7 @@
     <key>ProgramArguments</key>
     <array>
       <string>/usr/local/bin/python</string>
+      <string>-B</string>
       <string>{home}/battery_monitor/start.py</string>
     </array>
     <key>StandardOutPath</key>
