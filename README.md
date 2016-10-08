@@ -7,7 +7,7 @@ Get macOS notifications when your battery percentage hits certain thresholds.
     cd battery_monitor
     ./install.sh
 
-#### Tests
+### Tests
 Run full suite with: 
   
     python -m unittest discover tests -p "*.py"
