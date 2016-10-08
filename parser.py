@@ -15,9 +15,12 @@ class Parser():
             self.is_discharging_at_lower_bound()
 
     def is_charging_at_upper_bound(self):
-        return self.battery_status == "charging" and \
-            self.percent == self.upper_bound
+        return self.is_battery_charging() and \
+            self.percent >= self.upper_bound
 
     def is_discharging_at_lower_bound(self):
-        return self.battery_status == "discharging" and \
+        return not self.is_battery_charging() and \
             self.percent <= self.lower_bound
+
+    def is_battery_charging(self):
+        return re.search(r"^charg(ed|ing)$", self.battery_status)

@@ -10,4 +10,4 @@ Get macOS notifications when your battery percentage hits certain thresholds.
 #### Tests
 Run full suite with: 
   
-    python -m unittest discover tests -p ".py"
+    python -m unittest discover tests -p "*.py"
