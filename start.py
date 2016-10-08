@@ -1,6 +1,6 @@
 import logging
 from time import sleep
-from monitor import Monitor
+from bm.monitor import Monitor
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s: %(message)s")
 logging.info("Starting Battery Monitor")
@@ -11,4 +11,4 @@ while True:
 
     if result.has_crossed_threshold():
         Monitor.notify(result.percent)
-    sleep(150)
+    sleep(Monitor.wait_period)

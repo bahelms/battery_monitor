@@ -1,5 +1,5 @@
 import unittest
-from parser import Parser
+from bm.parser import Parser
 
 class ParserTest(unittest.TestCase):
     def test_returns_true_if_has_crossed_upper_bound_threshold(self):

@@ -1,5 +1,5 @@
 import unittest
-from monitor import Monitor
+from bm.monitor import Monitor
 
 class MonitorTest(unittest.TestCase):
     def test_check_battery_returns_a_result(self):

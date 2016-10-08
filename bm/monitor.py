@@ -1,9 +1,11 @@
 from subprocess import check_output, call
-from parser import Parser
+from bm import config
+from bm.parser import Parser
 
 class Monitor:
-    upper_bound = 100
-    lower_bound = 30
+    upper_bound = config["upper_bound"]
+    lower_bound = config["lower_bound"]
+    wait_period = 150 # seconds
 
     @classmethod
     def check_battery(cls):
